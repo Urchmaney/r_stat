@@ -5,7 +5,8 @@ RSpec.describe RStat do
     expect(RStat::VERSION).not_to be nil
   end
 
-  it "does something useful" do
-    expect(false).to eq(true)
+  it "should calculate mean" do
+    result = RStat.mean([1, 2, 3, 4, 5])
+    expect(result).to eq(3)
   end
 end

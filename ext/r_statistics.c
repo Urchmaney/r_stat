@@ -1,13 +1,11 @@
 #include "ruby.h"
 #include "extconf.h"
 
-VALUE rb_return_nil(VALUE);
 VALUE rb_create_hash(VALUE, VALUE);
 VALUE rb_sum(VALUE, VALUE);
 
 void Init_r_statistics(void) {
     VALUE mod = rb_define_module("RStatistics");
-    rb_define_method(mod, "show_nil", rb_return_nil, 0);
     rb_define_method(mod, "create_hash_with_val", rb_create_hash, 1);
     rb_define_method(mod, "sum", rb_sum, 1);
 }

@@ -10,7 +10,7 @@ require "rubocop/rake_task"
 
 RuboCop::RakeTask.new
 
-task :build do
+task :build_ext do
   Dir.chdir("ext") do
     output = `ruby extconf.rb`
     raise output unless $CHILD_STATUS == 0
@@ -20,4 +20,4 @@ task :build do
   end
 end
 
-task default: %i[build spec rubocop]
+task default: %i[build_ext spec rubocop]

@@ -1,13 +1,13 @@
 #include "ruby.h"
 #include "extconf.h"
+#include "./r_statistics.h"
 
-VALUE rb_create_hash(VALUE, VALUE);
-VALUE rb_sum(VALUE, VALUE);
 
 void Init_r_statistics(void) {
     VALUE mod = rb_define_module("RStatistics");
     rb_define_method(mod, "create_hash_with_val", rb_create_hash, 1);
     rb_define_method(mod, "sum", rb_sum, 1);
+    rb_define_method(mod, "mean", rb_mean, 1);
 }
 
 VALUE rb_return_nil(VALUE val) {
@@ -34,4 +34,20 @@ VALUE rb_sum(VALUE self, VALUE arr) {
         res += FIX2LONG(elements[i]);
     }
     return LONG2FIX(res);
+}
+
+VALUE rb_mean(VALUE self, VALUE arr) {
+      long rtype = TYPE(arr);
+    if (rtype != T_ARRAY) {
+        return LONG2FIX(0);
+    }
+    // RUBY_ASSERT(RB_TYPE_P(arr, T_ARRAY));
+    long len = RARRAY_LEN(arr);
+    VALUE *elements = RARRAY_PTR(arr);
+    int i = 0;
+    long res = 0;
+    for(; i < len; i++) {
+        res += FIX2LONG(elements[i]);
+    }
+    return LONG2FIX(res / len);
 }

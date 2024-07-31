@@ -7,8 +7,4 @@ require_relative "../ext/r_statistics"
 module RStat
   class Error < StandardError; end
   extend RStatistics
-
-  def self.mean(arr)
-    sum(arr) / arr.length
-  end
 end

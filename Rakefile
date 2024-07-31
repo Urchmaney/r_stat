@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
+require "English"
 require "bundler/gem_tasks"
 require "rspec/core/rake_task"
 
@@ -9,4 +10,14 @@ require "rubocop/rake_task"
 
 RuboCop::RakeTask.new
 
-task default: %i[spec rubocop]
+task :build do
+  Dir.chdir("ext") do
+    output = `ruby extconf.rb`
+    raise output unless $CHILD_STATUS == 0
+
+    output = `make`
+    raise output unless $CHILD_STATUS == 0
+  end
+end
+
+task default: %i[build spec rubocop]

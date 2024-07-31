@@ -12,7 +12,7 @@ NULLCMD = :
 
 #### Start of system configuration section. ####
 
-srcdir = ext
+srcdir = .
 topdir = /home/urchmaney/.rbenv/versions/3.3.4/include/ruby-3.3.0
 hdrdir = $(topdir)
 arch_hdrdir = /home/urchmaney/.rbenv/versions/3.3.4/include/ruby-3.3.0/x86_64-linux
@@ -143,7 +143,7 @@ LIBS = $(LIBRUBYARG_SHARED)  -lm -lpthread  -lc
 ORIG_SRCS = r_statistics.c
 SRCS = $(ORIG_SRCS) 
 OBJS = r_statistics.o
-HDRS = 
+HDRS = $(srcdir)/extconf.h
 LOCAL_HDRS = 
 TARGET = r_statistics
 TARGET_NAME = r_statistics

@@ -1,4 +1,6 @@
+# frozen_string_literal: true
+
 require "mkmf"
 
 create_header
-create_makefile 'r_statistics'
+create_makefile "r_statistics"

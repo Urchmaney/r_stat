@@ -10,7 +10,6 @@ Gem::Specification.new do |spec|
 
   spec.summary = "Ruby statistics library."
   spec.description = "Statistics algorithms used for computations"
-  # spec.homepage = "TODO: Put your gem's website or public repo URL here."
   spec.license = "MIT"
   spec.required_ruby_version = ">= 3.0.0"
 

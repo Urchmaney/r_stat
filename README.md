@@ -31,7 +31,6 @@ RStata.sum([1, 3, 5])
 
 Bug reports and pull requests are welcome on GitHub at https://github.com/urchmaney/r_stat. This project is intended to be a safe, welcoming space for collaboration, and contributors.
 
-
 ## License
 
 The gem is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).

@@ -10,7 +10,7 @@ RSpec::Core::RakeTask.new(:spec)
 RuboCop::RakeTask.new
 
 Rake::ExtensionTask.new "r_statistics" do |ext|
-  ext.lib_dir = "lib/r_stat"
+  ext.lib_dir = "lib/r_statistics"
 end
 
 task default: %i[compile spec rubocop]

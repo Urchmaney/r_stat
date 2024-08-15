@@ -7,7 +7,7 @@ RSpec.describe RStata do
 
   it "should calculate sum" do
     result = RStata.sum([1, 2, 3, 4, 5])
-    expect(result).to eq(15);
+    expect(result).to eq(15)
   end
 
   it "should calculate mean" do

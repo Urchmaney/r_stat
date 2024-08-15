@@ -23,9 +23,14 @@ If bundler is not being used to manage dependencies, install the gem by executin
 RStata.sum([1, 3, 5])
 ```
 
+### Variance
+```ruby
+RStata.variance([1, 3, 5])
+```
+
 ## Under Development (TODO)
 - [ ] Standard Deviation
-- [ ] Variance
+- [x] Variance
 
 ## Contributing
 

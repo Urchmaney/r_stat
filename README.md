@@ -16,7 +16,7 @@ If bundler is not being used to manage dependencies, install the gem by executin
 
 ### Mean
 ```ruby
-    RStata.mean [...]
+RStata.mean [...]
 ```
 ### Summation
 ```ruby

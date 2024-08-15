@@ -1,6 +1,6 @@
 # RStata
 
-A Ruby gem for statistical calculations. Uses C extension to enable fast calculation.
+A Simple Ruby statistics Gem in its infancy. Using C extensions to make it faster.
 
 ## Installation
 
@@ -18,6 +18,10 @@ If bundler is not being used to manage dependencies, install the gem by executin
 ```ruby
     RStata.mean [...]
 ```
+### Summation
+```ruby
+RStata.sum([1, 3, 5])
+```
 
 ## Under Development (TODO)
 - [ ] Standard Deviation
@@ -26,6 +30,7 @@ If bundler is not being used to manage dependencies, install the gem by executin
 ## Contributing
 
 Bug reports and pull requests are welcome on GitHub at https://github.com/urchmaney/r_stat. This project is intended to be a safe, welcoming space for collaboration, and contributors.
+
 
 ## License
 

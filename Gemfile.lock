@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    r_stat (0.1.0)
+    r_stata (0.1.0)
 
 GEM
   remote: https://rubygems.org/
@@ -57,7 +57,7 @@ PLATFORMS
   x86_64-linux
 
 DEPENDENCIES
-  r_stat!
+  r_stata!
   rake (~> 13.0)
   rake-compiler (~> 1.2, >= 1.2.7)
   rspec (~> 3.0)

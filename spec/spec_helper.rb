@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require "r_stat"
+require "r_stata"
 
 RSpec.configure do |config|
   # Enable flags like --only-failures and --next-failure
